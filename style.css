@@ -1,0 +1,343 @@
+
+/*
+	Colores para el menu
+
+	fondo del logo : #C355FF;
+	color del texto del menu :#888;
+	color despues del hover : #353535;
+*/
+
+/*$logo:#C355FF;*/
+@import url("https://fonts.googleapis.com/css?family=Chewy|Roboto|Exo|Open Sans");
+
+*{
+	padding: 0px;
+	margin: 0px;
+	font-family: "Roboto";
+}
+
+.main-navigation{
+	position: fixed;
+	width: 100%;
+	height: 70px;
+	background: #fff;
+	border-bottom: 1px solid #eee;
+	display: flex;
+	justify-content: flex-end;
+	align-items: center;
+	z-index: 2000;
+
+}
+
+.main-navigation .container-logo{
+	position: absolute;
+	left:10px;
+}
+.main-navigation .container-logo .logo{
+	color: #C355FF;
+	font-family: "Chewy";
+}
+.main-navigation .menu ul{
+	display: flex;
+	list-style: none;
+
+}
+.main-navigation .menu ul li a{
+	position: relative;
+	display: block;
+	text-decoration: none;
+	padding:10px 25px;
+	margin-left: 5px;
+	background:#fff;
+	color: #888;
+	cursor:pointer;
+}
+.main-navigation .menu ul li a:hover{
+	color: #353535;
+}
+
+.container{
+	position:absolute;
+	top:70px;
+	width:100%;
+	height:1200px; 
+}
+
+.container .slider-layout{
+position: relative;
+top:0px;
+height:450px;
+background: red;
+overflow: hidden;
+}
+.container .slider-layout .move-slider{
+	position: absolute;
+	display: block;
+	top:150px;
+	transform: translateY(50%);
+	width: 85px;
+	height: 85px;
+	background:none;
+	z-index: 200;
+	font-size: 105px;
+	text-align: center;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.container .slider-layout .move-slider i{
+	text-align: center;
+	color: #fff;
+}
+.container .slider-layout .move-prev{
+	left: 10px;
+}
+.container .slider-layout .move-next{
+	right: 10px;
+}
+.container .slider-layout .slide-show{
+	width:400%;
+	height: 100%;
+	display: flex;
+	list-style: none;
+	-webkit-animation: change 15s infinite alternate;
+	-o-animation: change 15s infinite alternate;
+	animation: change 15s infinite alternate;
+
+}
+
+@keyframes change{
+	0%{margin-left: 0%;}
+	20%{margin-left: 0%}
+	25%{margin-left: -100%}
+	45%{margin-left: -100%}
+	50%{margin-left: -200%}
+	70%{margin-left: -200%}
+	75%{margin-left: -300%}
+	100%{margin-left: -300%}
+}
+
+.container .slider-layout .slide-show  li{
+	position: relative;
+	top:0px;
+	width: 100%;
+	height: 100%;
+
+}
+.container .slider-layout .slide-show  li .container-image{
+	position:relative;
+	top:0px;
+	display:block;
+	width: 100%;
+	height:100%;
+	background:url("../image/fondo.png");
+	background-size: cover;
+}
+.container .slider-layout .slide-show  li:before{
+	position:absolute;
+	top:0;
+	left:0;
+	content:"";
+	width: 100%;
+	height: 100%;
+	background: rgba(0,0,0,0.2);
+	z-index: 1;
+}
+.container .slider-layout .slide-show  li .container-info{
+	position:absolute;
+	top:5px;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	width:80%;
+	height:90%;
+	margin: auto;
+	z-index: 500;
+}
+
+.container .slider-layout .slide-show  li .container-info h1{
+	position: relative;
+	color:#fff;
+	text-align: center;
+}
+
+
+.container .slider-layout .slide-show  li .container-info .text-info-welcome{
+	position: relative;
+	top:10px;
+	color: #fff;
+	text-align: center;
+
+}
+.container .slider-layout .slide-show  li .image-welcome{
+	position: relative;
+	display:flex;
+	top:30px;
+	width: 200px;
+	height: 200px;
+	margin: auto;
+}
+
+.container .slider-layout .slide-show  li .more-info{
+	position: relative;
+	top:80px;
+	display: block;
+	padding: 15px;
+	width: 150px;
+	margin: auto;
+	background: #fff;
+	color:#C355FF;
+	text-decoration: none;
+	text-align: center;
+	cursor: pointer;
+	border-radius: 3px;
+}
+.container .slider-layout .slide-show  li .more-info:hover{
+	background: #f0f0f0;
+}
+.container .section-how-work-ours {
+  position: relative;
+  top: 3px;
+  width: 100%;
+  height: 450px;
+  background: #f9f9f9;
+}
+
+.container .section-how-work-ours .main-heading {
+  position: relative;
+  top: 60px;
+  width: 80%;
+  height: 80px;
+  margin: auto;
+  background: #f9f9f9;
+}
+
+.container .section-how-work-ours .main-heading h1 {
+  position: relative;
+  font-size: 25px;
+  text-align: center;
+  color: #384047;
+}
+
+.container .section-how-work-ours .container-section-works {
+  position: relative;
+  top: 70px;
+  width: 100%;
+  height: auto;
+  padding: 12px;
+  background: #f9f9f9;
+}
+
+.container .section-how-work-ours .container-section-works ul {
+  position: relative;
+  list-style: none;
+  display: block;
+  -webkit-flex-wrap: wrap;
+      -ms-flex-wrap: wrap;
+          flex-wrap: wrap;
+}
+
+.container .section-how-work-ours .container-section-works ul li .container-work {
+  position: relative;
+  top: 20px;
+  width: 100%;
+  height: 250px;
+  margin-bottom: 10px;
+  background: #f9f9f9;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-wrap: wrap;
+      -ms-flex-wrap: wrap;
+          flex-wrap: wrap;
+}
+
+.container .section-how-work-ours .container-section-works ul li .container-work .panels-info {
+  position: relative;
+  width: 50%;
+  height: 100%;
+  background: #f9f9f9;
+}
+
+.container .section-how-work-ours .container-section-works ul li .container-work .columm-left .workspace {
+  position: relative;
+  left: 30px;
+  top: 5px;
+  width: 280px;
+  height: 230px;
+  background: #21D8DE;
+  border-radius: 4px;
+}
+
+.container .section-how-work-ours .container-section-works ul li .container-work .columm-left .workspace img {
+  position: relative;
+  display: block;
+  width: 180px;
+  height: 180px;
+  margin: auto;
+  top: 30px;
+}
+
+.container .section-how-work-ours .container-section-works ul li .container-work .columm-left .container-image {
+  position: relative;
+  left: 30px;
+  top: 5px;
+  width: 280px;
+  height: 230px;
+  background: #FF757C;
+  border-radius: 4px;
+}
+
+.container .section-how-work-ours .container-section-works ul li .container-work .columm-left .container-image img {
+  position: relative;
+  display: block;
+  width: 150px;
+  height: 150px;
+  margin: auto;
+  top: 40px;
+}
+
+.container .section-how-work-ours .container-section-works ul li .container-work .medal-picture {
+  position: relative;
+  left: 30px;
+  top: 5px;
+  width: 280px;
+  height: 230px;
+  border-radius: 4px;
+  background: #90DFAA;
+}
+
+.container .section-how-work-ours .container-section-works ul li .container-work .medal-picture img {
+  position: relative;
+  display: block;
+  width: 150px;
+  height: 150px;
+  margin: auto;
+  top: 40px;
+}
+
+.container .section-how-work-ours .container-section-works ul li .container-work .columns-right {
+  background: #f9f9f9;
+}
+
+.container .section-how-work-ours .container-section-works ul li .container-work .columns-right h3 {
+  position: relative;
+  left: 40px;
+  top: 10px;
+  width: 250px;
+  color: #353535;
+  font-family: "Exo";
+}
+
+.container .section-how-work-ours .container-section-works ul li .container-work .columns-right p.info-text {
+  position: relative;
+  top: 30px;
+  width: 370px;
+  left: 40px;
+  color: #717f86;
+  font-size: 16px;
+  word-break: break-all;
+  word-wrap: break-word;
+  font-family: "Open Sans";
+}
